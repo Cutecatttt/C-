@@ -9,7 +9,8 @@ Trước hàm getline() mà trong luồng cin có thừa kí tự enter thì ph�
 Để so sánh 2 xâu bạn có thể sử dụng luôn các toán tử so sánh như >, <, !=, ==...
 
 Hàm length() và size() Trả về độ dài xâu
-Hàm push_back()        Thêm 1 ký tự vào cuối string và pop_back() sẽ xóa đi ký tự cuối cùng trong string.
+Hàm push_back()        Thêm 1 ký tự vào cuối string 
+Hàm pop_back()         Xóa đi ký tự cuối cùng trong string.
 Hàm insert()           Chèn một xâu khác vào vị trí bất kỳ trong xâu hiện tại thông qua chỉ số chèn.
 Hàm erase(pos, n)      Xóa n ký tự trong xâu s tính từ chỉ số pos
 Hàm substr(pos, n)     Trả về xâu con gồm n ký tự tính từ chỉ số pos của xâu s
