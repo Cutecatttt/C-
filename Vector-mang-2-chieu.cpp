@@ -13,4 +13,10 @@ int main()
             a[i].push_back(x);
         }
     }
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < a[i].size(); j++){
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
