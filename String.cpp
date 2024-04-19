@@ -21,10 +21,10 @@ Hàm tolower()          Chuyển các chữ về chữ in thường
 Hàm toupper()          Chuyển các chữ về chữ in hoa
 Hàm stringstream       Biến xâu string của bạn thành luồng (tương tự như luồng vào từ bàn phím là cin)
 
-Hàm stoi()	     Chuyển string thành số int
+Hàm stoi()	 Chuyển string thành số int
 Hàm stoll()      Chuyển string thành số long long
 Hàm stof()       Chuyển string thành số float
-Hàm stod()	     Chuyển string thành số double
+Hàm stod()	 Chuyển string thành số double
 Hàm stold()      Chuyển string thành số long double
 Hàm to_string()  Chuyển số thành xâu.
 */
