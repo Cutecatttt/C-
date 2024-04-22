@@ -104,7 +104,7 @@ void deleteMiddle(NODE *&a, int pos){
 }
 
 void in(NODE *a){
-    cout << "----------------------------------\n";
+    cout << "---------------------------------\n";
     while(a != NULL){
         cout << a -> data << " ";
         a = a-> next;
