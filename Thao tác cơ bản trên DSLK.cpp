@@ -109,24 +109,42 @@ void in(NODE *a){
         cout << a -> data << " ";
         a = a-> next;
     }
-    cout << "\n---------------------------------\n";
+    cout << endl;
+}
+
+void sapxep(NODE *&a){
+    
+    for(NODE *p = a; p -> next != NULL; p = p -> next){
+        NODE *min = p;
+        for(NODE *q = p -> next; q!= NULL; q = q -> next){
+            if(q -> data < min -> data){
+                min = q;
+            }
+        }
+        int tmp = min -> data;
+        min -> data = p -> data;
+        p -> data = tmp;
+        
+    }
 }
 
 int main() {
     NODE *head = NULL;
     while(1){
-        cout << "-------------MENU---------------\n";
+        cout << "--------------MENU---------------\n";
+        cout << "0. Exit\n";
         cout << "1. Chen phan tu vao dau danh sach\n";
         cout << "2. Chen phan tu vao cuoi danh sach\n";
         cout << "3. Chen phan tu vao giua danh sach\n";
         cout << "4. Xoa phan tu o dau\n";
         cout << "5. Xoa phan tu o cuoi\n"; 
         cout << "6. Xoa phan tu o giua\n";
-        cout << "7. Duyet danh sach lient ket\n";
-        cout << "8. Exit\n";
+        cout << "7. Duyet danh sach lien ket\n";
+        cout << "8. Sap xep danh sach lien ket\n";
         cout << "---------------------------------\n";
-        cout << "Nhap lua chon :";
+        cout << "Nhap lua chon : ";
         int lc; cin >> lc;
+        if (lc == 0) break;
         switch(lc){
             case 1:{
                 int x; cout << "nhap gia tri can chen :"; cin >> x;
@@ -163,8 +181,11 @@ int main() {
                 in(head);
                 break;
             }
+            case 8:{
+                sapxep(head);
+                break;
+            }
         }
-        if (lc == 8) break;
     }
     
 }
