@@ -29,37 +29,75 @@ Hàm stod()	 Chuyển string thành số double
 Hàm stold()      Chuyển string thành số long double
 Hàm to_string()  Chuyển số thành xâu.
 */
-int main(){
-  int n;
-  cout << "nhap so tuoi : ";
-  cin >> n;
-  string s;
-  cout << "nhap ho ten : ";
-  cin.ignore();
-  getline(cin, s);
-  stringstream ss(s);
-  stringstream sa(s);
-  string tmp;
-  while(ss >> tmp){
-    cout << tmp << endl;
-  }
-  while(getline(sa, tmp, ' ')){
-    cout << tmp << endl;
-  }
-  s.push_back('@');
-  s += "gmail.com";
-  s.insert(0, "email: ");
-  for(char &x : s)
-		x = tolower(x);
-  cout << "So tuoi : " << n << endl;
-  if(s.find("nguyen") == string::npos){
-      cout << "NOT FOUND\n";
-  }
-  else{
-      cout << "FOUND\n";
-      cout << s.find("Nguyen") << endl;
-  }
+void email_1(string n, string s){
+	s += ".";
+	//tach ho va ten
+	while(s.find(" ") != string::npos){
+	    s[0] = toupper(s[0]);
+	    int pos = s.find(" ");
+	    s += s[0];
+	    s.erase(0, pos+1);
+	}
+	s[0] = toupper(s[0]);
+    n.erase(0, 2) ;
+    s += n;
+    s.insert(0, "email: ");
+    s += "@sis.hust.edu.vn";
+    cout << s << endl;
+}
 
-  cout << s << endl;
-  return 0;
+void email_2(string n, string s){
+    stringstream ss(s);
+    string tmp;
+    string a = ".";
+    //dich bit
+    while(ss >> tmp){
+        a+= toupper(tmp[0]);
+    }
+    tmp += a;
+    tmp[0] = toupper(tmp[0]);
+    tmp.pop_back();
+    n.erase(0, 2) ;
+    tmp += n;
+    tmp.insert(0, "email: ");
+    tmp += "@sis.hust.edu.vn";
+    cout << tmp << endl;
+}
+
+void email_3(string n, string s){
+    stringstream ss(s);
+    string tmp;
+    string a = ".";
+    //tach ho va ten
+    while(getline(ss, tmp, ' ')){
+        a+= toupper(tmp[0]);
+    }
+    tmp += a;
+    tmp[0] = toupper(tmp[0]);
+    tmp.pop_back();
+    n.erase(0, 2) ;
+    tmp += n;
+    tmp.insert(0, "email: ");
+    tmp += "@sis.hust.edu.vn";
+    cout << tmp << endl;
+}
+
+int main(){
+    string n;
+    cout << "nhap ma so sinh vien: ";
+    cin >> n;
+    string s;
+    //xoa lenh xuong dong truoc do
+    cin.ignore();
+    //nhap xau co dau cach
+    cout << "nhap ten sinh vien: ";
+    getline(cin, s);
+    //chuyen ve chu in thuong
+    for(char &x : s)
+		x = tolower(x);
+	email_1(n, s);
+	email_2(n, s);
+    email_3(n, s);
+    return 0;
+    
 }
