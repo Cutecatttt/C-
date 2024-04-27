@@ -1,4 +1,3 @@
-//Sàng sô nguyên tố
 #include <bits/stdc++.h>
 
 using namespace std;
