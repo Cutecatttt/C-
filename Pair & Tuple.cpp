@@ -18,4 +18,5 @@ int main() {
     tuple<int, int, int> t = {100, 200, 300};
     cout << get<0>(t) << endl;
     cout << get<1>(t) << endl;
+    cout << get<2>(t) << endl;
 }
