@@ -9,15 +9,15 @@ Các phần tử trong set được tự động sắp xếp theo thứ tự tă
 Tìm kiếm phần tử trong set chỉ mất độ phức tạp O(logN)
 Set không thể truy cập phần tử thông qua chỉ số như mảng hay vector, string
 
-s.size(): Số lượng phần tử trong set. <ĐPT O(logn)>
-s.insert(a): Thêm phần tử a vào trong set . <ĐPT O(logn)>
+s.size(): Số lượng phần tử trong set. => ĐPT O(logN)
+s.insert(a): Thêm phần tử a vào trong set. => ĐPT O(logN)
 s.empty(): Kiểm tra set rỗng, nếu đúng trả về true, ngược lại trả về false
 s.clear(): Xóa toàn bộ phần tử trong set.
-s.count(a): Trả về số lần xuất hiện của phần tử a trong set. <ĐPT O(logn)>
-s.find(a): Tìm kiếm phần tử a trong set, hàm sẽ trả về iterator tới phần tử nếu tìm thấy, ngược lại sẽ trả về iterator end() của set. <ĐPT O(logn)>
-s.erase(a): Xóa phần tử a trong set. <ĐPT O(logn)>
-s.lower_bound(a): Trả về iterator tới phần tử có giá trị nhỏ nhất lớn hơn hoặc bằng giá trị a. <ĐPT O(logn)>
-s.upper_bound(a): Trả về iterator tới phần tử có giá trị nhỏ nhất lớn hơn giá trị cần tìm kiếm. <ĐPT O(logn)>
+s.count(a): Trả về số lần xuất hiện của phần tử a trong set (chỉ có thể trả về 0 hoặc 1). => ĐPT O(logN)
+s.find(a): Tìm kiếm phần tử a trong set, hàm sẽ trả về iterator tới phần tử nếu tìm thấy, ngược lại sẽ trả về iterator end() của set. => ĐPT O(logN)
+s.erase(a): Xóa phần tử a trong set. => ĐPT O(logN)
+s.lower_bound(a): Trả về iterator tới phần tử có giá trị nhỏ nhất lớn hơn hoặc bằng giá trị a. => ĐPT O(logN)
+s.upper_bound(a): Trả về iterator tới phần tử có giá trị nhỏ nhất lớn hơn giá trị cần tìm kiếm. => ĐPT O(logN)
 
 Dùng toán tử dải tham chiếu "*" để truy cập vào phần tử mà iterator trong vector đang trỏ tới
 
