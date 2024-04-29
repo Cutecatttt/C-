@@ -3,6 +3,8 @@
 using namespace std;
 /*
 vector<data_type> vector_name;
+Vector là một container có tính chất tương tự như 1 mảng động, nó tự thay đổi kích thước khi bạn thêm hay xóa các phần tử trong mảng.
+
 size() : Trả về số lượng phần tử trong vector. Độ phức tạp O(1)
 length() : Trả về số lượng phần tử trong vector. Độ phức tạp O(1)
 push_back() : Thêm phần tử vào cuối vector. Độ phức tạp O(1)
