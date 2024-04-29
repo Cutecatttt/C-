@@ -5,8 +5,8 @@ using namespace std;
 multiset<data_type> set_name;
 Tương tự như set nhưng các phần tử trong multiset có thể trùng nhau
 Sử dụng các hàm tương tự như trong set
-s.erase(a): Xóa đi các phần tử có cùng giá trị a. <ĐPT(logn)>
-s.erase(iterator): xóa đi phần tử mà iterator đang chỉ vào. <ĐPT(logn)>
+s.erase(a): Xóa đi các phần tử có cùng giá trị a. => ĐPT(logN)
+s.erase(iterator): xóa đi phần tử mà iterator đang chỉ tới. => ĐPT(logN)
 */
 int main() {
     //cho mang n phan tu va so nguyen k
