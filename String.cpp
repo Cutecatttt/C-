@@ -93,11 +93,11 @@ int main(){
     cout << "nhap ten sinh vien: ";
     getline(cin, s);
     //chuyen ve chu in thuong
-    for(char &x : s)
-		x = tolower(x);
-	email_1(n, s);
-	email_2(n, s);
+    for(char &x : s){
+	x = tolower(x);
+    }
+    email_1(n, s);
+    email_2(n, s);
     email_3(n, s);
     return 0;
-    
 }
