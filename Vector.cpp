@@ -5,10 +5,10 @@ using namespace std;
 vector<data_type> vector_name;
 Vector là một container có tính chất tương tự như 1 mảng động, nó tự thay đổi kích thước khi bạn thêm hay xóa các phần tử trong mảng.
 
-v.size(): Trả về số lượng phần tử trong vector. <ĐPT O(1)>
-v.length(): Trả về số lượng phần tử trong vector. <ĐPT O(1)>
-v.push_back(a): Thêm phần tử a vào cuối vector. <ĐPT O(1)>
-v.pop_back(): Xóa phần tử cuối cùng trong vector. <ĐPT O(1)>
+v.size(): Trả về số lượng phần tử trong vector.   => ĐPT O(1)
+v.length(): Trả về số lượng phần tử trong vector. => ĐPT O(1)
+v.push_back(a): Thêm phần tử a vào cuối vector.   => ĐPT O(1)
+v.pop_back(): Xóa phần tử cuối cùng trong vector. => ĐPT O(1)
 */
 int main(){
     int n; cin >> n;
