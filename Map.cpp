@@ -30,7 +30,7 @@ int main(){
     mp[1] = 3;
     mp[5] = 7;
     if(mp.count(3) != 0){
-        mp.erase(3);
+        mp.erase(mp.find(3));
     }
     for(pair<int, int> it : mp){
         cout << "key = " << it.first << ", value = " << it.second << endl;
