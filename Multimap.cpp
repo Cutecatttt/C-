@@ -11,7 +11,7 @@ Multimap không hỗ trợ chỉ số như mảng hay vector mà chỉ số củ
 Sử dụng các hàm tương tự như trong set
 mp.find(): Trả về iterator tới cặp phần tử đầu tiên có key tương ứng trong map.
 mp.erase(key): Xóa đi các phần tử có cùng giá trị key trong multimap. => ĐPT(logN)
-mp.erase(iterator): Chỉ xóa đi phần tử mà iterator đang chỉ tới. => ĐPT(logN)
+mp.erase(iterator): Chỉ xóa đi phần tử mà iterator đang chỉ tới. => ĐPT(1)
 */
 
 int main(){
