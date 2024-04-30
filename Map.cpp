@@ -25,11 +25,13 @@ int main(){
     map<int, int> mp;
     mp.insert(make_pair(1, 2));
     mp.insert(make_pair(2, 4));
-    mp.insert(make_pair(3, 5));
+    mp.insert({3,5});
+    mp.insert({4,6});
     mp[1] = 3;
-    mp[4] = 6;
-    auto it = mp.find(2);
-    mp.erase(it);
+    mp[5] = 7;
+    if(mp.count(3) != 0){
+        mp.erase(3);
+    }
     for(pair<int, int> it : mp){
         cout << "key = " << it.first << ", value = " << it.second << endl;
     }
