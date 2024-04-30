@@ -16,14 +16,16 @@ mp.erase(iterator): Chỉ xóa đi phần tử mà iterator đang chỉ tới. =
 
 int main(){
     multimap<int, int> mp;
-    mp.insert(make_pair(1, 2));
-    mp.insert(make_pair(2, 4));
-    mp.insert(make_pair(3, 5));
-    mp[1] = 3;
-    mp[4] = 6;
-    auto it = mp.find(3);
+    mp.insert(make_pair(1, 100));
+    mp.insert(make_pair(2, 200));
+    mp.insert(make_pair(2, 300));
+    mp.insert({3, 500});
+    mp.insert({1, 200});
+    mp.insert({3, 400});
+    //tra ve con tro den phan tu dau tien co key = 2
+    auto it = mp.find(2);
     mp.erase(it);
-    for(pair<int, int> it : mp){
+    for(auto it : mp){
         cout << "key = " << it.first << ", value = " << it.second << endl;
     }
 }
