@@ -19,11 +19,13 @@ Từ khóa auto giúp tự suy luận ra kiểu dữ liệu phù hợp với bi�
 
 int main() {
     vector<int> v = {28, 100, 30, 20, 15};
+    //duyet xuoi
     for(vector<int>::iterator it = v.begin(); it != v.end(); it++){
         cout << *it << " ";
     }
     cout << endl;
-    for(auto it = v.begin(); it != v.end(); it++){
+    //duyet nguoc
+    for(auto it = v.rbegin(); it != v.rend(); it++){
         cout << *it << " ";
     }
     cout << endl;
@@ -31,4 +33,3 @@ int main() {
     cout << "Phan tu thu 2 trong day la: " << *(v.begin() + 2);
     return 0;
 }
-
